@@ -25,7 +25,7 @@
 #     return max_val
 #
 #
-# # 5. O(n²) — Квадратичное время
+# # bankapi. O(n²) — Квадратичное время
 # def has_duplicates(my_list):  # неоптимальный способ
 #     for i in range(len(my_list)):  # <-- n раз
 #         for j in range(i + 1, len(my_list)):  # <-- ~n раз

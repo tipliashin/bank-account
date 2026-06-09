@@ -1,10 +1,10 @@
 """
 squares = [x**2 for x in range(10)]
 print(squares)
-sq_dict = {x: x**2 for x in range(5)}
+sq_dict = {x: x**2 for x in range(bankapi)}
 print(sq_dict)
 words = ["apple", "banan", "apple", "kiwi"]
-lengths = {w for w in words}  # {4, 5, 6}
+lengths = {w for w in words}  # {4, bankapi, 6}
 print(lengths)
 """
 

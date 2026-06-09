@@ -3,7 +3,7 @@
 #         yield n
 #         n -= 1
 #
-# for num in countdown(5):
+# for num in countdown(bankapi):
 #     print(num)
 #
 # squares = (x ** 2 for x in range(1,10))  # генератор
@@ -41,7 +41,7 @@ def read_lines_with_filter(filename, keyword):
         return
 
 
-for num in fibonacci(15):
+for num in fibonacci(300):
     print(num)
 
 with open("../test_log.txt", "w", encoding="utf-8") as f_w:
@@ -49,3 +49,15 @@ with open("../test_log.txt", "w", encoding="utf-8") as f_w:
 
 for line in read_lines_with_filter("../test_log.txt", "ERROR"):
     print(line, end="")
+
+
+# def fib(n, counter):
+#     counter[0] += 1          # увеличиваем счётчик при каждом вызове
+#     if n <= 1:
+#         return n
+#     return fib(n-1, counter) + fib(n-2, counter)
+#
+# calls = [0]                  # [0] — список с одним элементом
+# result = fib(1, calls)
+# print(f"fib(15) = {result}, вызовов: {calls[0]}")
+
