@@ -6,3 +6,5 @@ __pycache__/
 
 # Настройки PyCharm (опционально)
 .idea/
+
+SQL/bankapi/.env

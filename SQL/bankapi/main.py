@@ -5,10 +5,12 @@ from sqlalchemy import Column, Integer, String, Float, ForeignKey, select
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import declarative_base, relationship, joinedload
 from tasks import send_welcome_email
+import os
+from dotenv import load_dotenv
+load_dotenv()  # загружает переменные из .env в окружение
 
 # ---------- Настройка асинхронной БД ----------
-DATABASE_URL = "postgresql+asyncpg://postgres:1234@localhost:5432/bankapi"
-
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_async_engine(DATABASE_URL, echo=False)
 AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False)
 Base = declarative_base()
